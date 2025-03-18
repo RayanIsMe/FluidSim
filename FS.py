@@ -30,7 +30,7 @@ if st.session_state['SS'] == 1:
     if st.button("GET STARTED"):
       st.session_state['SS'] = 2
       
-elif st.session_state['SS'] = 2:
+elif st.session_state['SS'] == 2:
   st.write("Create Account")
 
 
