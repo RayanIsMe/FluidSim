@@ -5,6 +5,8 @@ with st.container(border = True):
                 with c1:
                         st.write("")
                         st.write("")
+                        st.write("")
+                        st.write("")
                         st.title("Fluid")
                         st.title("Simulation")
                 with c2:
