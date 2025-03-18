@@ -5,7 +5,7 @@ with st.container(border = True):
                 with c1:
                         st.write("")
                         st.write("")
-                        st.title("StellarThrust")
-                        st.subheader("A Rocket Launch Simulator")
+                        st.title("Fluid")
+                        st.title("Simulation")
                 with c2:
                         st.image("Logo1.jpg")
