@@ -14,11 +14,11 @@ with st.container(border = True):
 
 c1, c2 = st.columns(2)
 with c1:
-    st.header("ABOUT THE SIMULATION")
+    st.subheader("ABOUT THE SIMULATION")
     with st.container(border = True):
       st.write("This Fluid Simulation is an engaging and educational app designed to teach high school students the fundamentals of fluid mechanics through real-time simulation. Users can manipulate key factors like particle mass, velocity, pressure, and obstacles to observe how fluids behave in different conditions. The interactive visualizations make complex concepts—such as laminar vs. turbulent flow, Bernoulli’s principle, and vortex formation—intuitive and fun to explore.") 
 with c2:
-    st.header("ABOUT THE AUTHOR")
+    st.subheader("ABOUT THE AUTHOR")
     with st.container(border = True):
       st.write("I’m Rayan Gupta, a 12th-grade IBDP student passionate about physics, mathematics, and technology. I created Fluid Simulation to make fluid mechanics interactive and accessible for students like me. I love problem-solving, coding, and finding innovative ways to connect education with hands-on learning, making complex concepts easier to understand and explore.")
 
