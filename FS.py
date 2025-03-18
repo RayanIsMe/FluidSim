@@ -8,4 +8,4 @@ with st.container(border = True):
                         st.title("Fluid")
                         st.title("Simulation")
                 with c2:
-                        st.image("Logo1.jpg")
+                        st.image("Logo1.png")
