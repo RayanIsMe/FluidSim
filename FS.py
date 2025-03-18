@@ -35,10 +35,10 @@ elif st.session_state['SS'] == 2:
     st.header("Create Account")
     st.write("")
     st.write("Username")
-    username = st.text_input()
+    username = st.text_input(key = 1)
     st.write("")
     st.write("Password")
-    password = st.text_input()
+    password = st.text_input(key = 2)
     
     
 
