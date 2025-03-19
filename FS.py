@@ -34,9 +34,16 @@ elif st.session_state['SS'] == 2:
   with st.container(border = True):
     st.header("Create Account")
     st.write("")
-    username = st.text_input("Username", "")
+    st.text_input("Username", "", key = "username")
     st.write("")
-    password = st.text_input("Password", "")
+    st.text_input("Password", "", key = "password")
+    if st.button("LOGIN"):
+      if st.session_state["username"] == "admin" and st.session_state["password"] == "admin":
+        st.session_state['SS'] == 3
+      else
+        st.error("Invalid Username or Password")
+elif st.session_state['SS'] == 3:
+  st.write("DASHBOARD")
     
     
 
