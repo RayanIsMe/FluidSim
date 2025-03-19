@@ -49,8 +49,8 @@ elif st.session_state['SS'] == 2:
           st.error("Invalid Username or Password")
 
     if st.button("CREATE ACCOUNT"):
-      username.append(st.session_state["username_correct"])
-      password.append(st.session_state["password_correct"])
+      st.session_state["username_correct"].append(st.session_state["username"])
+      st.session_state["password_correct"].append(st.session_state["password"])
       st.caption("CREATED ACCOUNT")
       
 elif st.session_state['SS'] == 3:
