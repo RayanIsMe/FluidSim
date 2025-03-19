@@ -95,10 +95,15 @@ elif st.session_state['SS'] == 4:
         st.text_input("Particle Collision Coefficient", key = "particleCollision")
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
-        st.write("things")
+        st.text_input("Gravity", key = "Gravity")
+        st.text_input("X Boundary", key = "Bx")
+        st.text_input("Y Boundary", key = "By")
     with c4: #Analysis Tools
       with st.expander("Analysis Tools"):
-        st.write("things")
+        st.write("Resultant Y Force: " + "10")
+        st.write("Resultant X Force: " + "2")
+        st.write("Total Pressure: " + "4")
+        st.write("Average Temprature: " + "3")
     
     
 
