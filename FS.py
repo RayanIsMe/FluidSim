@@ -40,7 +40,7 @@ elif st.session_state['SS'] == 2:
     if st.button("LOGIN"):
       if st.session_state["username"] == "admin" and st.session_state["password"] == "admin":
         st.session_state['SS'] == 3
-      else
+      else:
         st.error("Invalid Username or Password")
 elif st.session_state['SS'] == 3:
   st.write("DASHBOARD")
