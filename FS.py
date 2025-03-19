@@ -60,7 +60,7 @@ elif st.session_state['SS'] == 3:
     with c1:
       st.write("To use Fluid Simulation, start by launching the app and selecting a scenario, such as pipe flow, aerodynamics, or open channels. Next, adjust key parameters like viscosity, velocity, pressure, or obstacles to customize the simulation. Once set, run the simulation and observe real-time changes in fluid behavior. Watch how different factors influence flow patterns, turbulence, and pressure distribution. Use visual tools to analyze results, compare different settings, and gain deeper insights into fluid mechanics. Experiment with various conditions to see how fluids react in different environments, reinforcing key physics concepts through hands-on learning.")
     with c2:
-      st.write("logo2")
+      st.image("Logo2.png")
     
     
 
