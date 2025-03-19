@@ -80,23 +80,20 @@ elif st.session_state['SS'] == 3:
 #SIMULATION SCREEN
 
 elif st.session_state['SS'] == 4:
-  with st.container(border = True):
+  with st.container(border = True): 
     c1, c2, c3, c4 = st.columns(4)
-    with c1:
-      with st.container(border = True):
+    with c1: #Pause-Play-Restart Menu
+      with st.container(border = True): 
         st.write("pause play")
-    with c2:
-      with st.container(border = True):
-        with st.expander("Particle Settings"):
-          st.write("things")
-    with c3:
-      with st.container(border = True):
-        with st.expander("Simulation Environment"):
-          st.write("things")
-    with c4:
-      with st.container(border = True):
-        with st.expander("Analysis Tools"):
-          st.write("things")
+    with c2: #Particle Settings
+      with st.expander("Particle Settings"):
+        st.write("things")
+    with c3: #Simulation Environment
+      with st.expander("Simulation Environment"):
+        st.write("things")
+    with c4: #Analysis Tools
+      with st.expander("Analysis Tools"):
+        st.write("things")
     
     
 
