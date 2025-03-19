@@ -54,7 +54,7 @@ elif st.session_state['SS'] == 2:
       st.caption("CREATED ACCOUNT")
       
 elif st.session_state['SS'] == 3:
-  st.title("     HOW TO USE SIMULATION")
+  st.title("HOW TO USE SIMULATION")
   with st.container(border = True):
     c1, c2 = st.columns(2)
     with c1:
