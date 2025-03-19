@@ -87,7 +87,8 @@ elif st.session_state['SS'] == 4:
         st.write("pause play")
     with c2: #Particle Settings
       with st.expander("Particle Settings"):
-        st.write("things")
+        st.text_input("Particle Mass", key = "particleMass")
+        st.text_input("Particle Density", key = "particleDensity")
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
         st.write("things")
