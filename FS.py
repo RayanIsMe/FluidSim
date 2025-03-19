@@ -6,6 +6,9 @@ if 'SS' not in st.session_state:
   st.session_state["username_correct"] = ["admin"]
   st.session_state["password_correct"] = ["admin"]
 
+#---------------------------------------------------------------------------------------------------------
+#HOME SCREEN
+
 if st.session_state['SS'] == 1:
     with st.container(border = True):
                     c1, c2 = st.columns(2)
@@ -31,6 +34,9 @@ if st.session_state['SS'] == 1:
     
     if st.button("GET STARTED"):
       st.session_state['SS'] = 2
+
+#---------------------------------------------------------------------------------------------------------
+#LOGIN SCREEN
       
 elif st.session_state['SS'] == 2:
   st.write(st.session_state['SS'])
@@ -52,6 +58,9 @@ elif st.session_state['SS'] == 2:
       st.session_state["username_correct"].append(st.session_state["username"])
       st.session_state["password_correct"].append(st.session_state["password"])
       st.caption("CREATED ACCOUNT")
+
+#---------------------------------------------------------------------------------------------------------
+#HOW TO USE SIMULATION SCREEN
       
 elif st.session_state['SS'] == 3:
   st.title("HOW TO USE SIMULATION")
@@ -67,6 +76,9 @@ elif st.session_state['SS'] == 3:
   if st.button("Countinue to Simulation"):
     st.session_state['SS'] = 4
 
+#---------------------------------------------------------------------------------------------------------
+#SIMULATION SCREEN
+
 elif st.session_state['SS'] == 4:
   with st.container(border = True):
     c1, c2, c3, c4 = st.columns(4)
@@ -80,6 +92,10 @@ elif st.session_state['SS'] == 4:
     with c3:
       with st.container(border = True):
         with st.expander("Simulation Environment"):
+          st.write("things")
+    with c4:
+      with st.container(border = True):
+        with st.expander("Analysis Tools"):
           st.write("things")
     
     
