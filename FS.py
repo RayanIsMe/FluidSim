@@ -84,8 +84,16 @@ elif st.session_state['SS'] == 4:
     c1, c2, c3, c4 = st.columns(4)
     with c1: #Pause-Play-Restart Menu
       with st.container(border = True): 
-        if st.button("", icon="⏸️"):
-          st.write("Pause")
+        b1, b2, b3 = st.columns(3)
+        with b1:
+          if st.button("", icon="⏸️"):
+            st.write("Pause")
+        with b2:
+          if st.button("", icon="▶️"):
+            st.write("Play")
+        with b3:
+          if st.button("", icon="🔄"):
+            st.write("Restart")
     with c2: #Particle Settings
       with st.expander("Particle Settings"):
         st.text_input("Particle Mass", key = "particleMass")
