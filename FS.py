@@ -64,6 +64,11 @@ elif st.session_state['SS'] == 3:
       st.write("")
       st.write("")
       st.image("Logo2.png")
+  if st.button("Countinue to Simulation"):
+    st.session_state['SS'] = 4
+
+elif st.session_state['SS'] == 4:
+  st.write("simulation screen")
     
     
 
