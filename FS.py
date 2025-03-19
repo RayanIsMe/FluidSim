@@ -84,7 +84,7 @@ elif st.session_state['SS'] == 4:
     c1, c2, c3, c4 = st.columns(4)
     with c1: #Pause-Play-Restart Menu
       with st.container(border = True): 
-        if st.button(label = None, icon="⏸️"):
+        if st.button(None, icon="⏸️"):
           st.write("Pause")
     with c2: #Particle Settings
       with st.expander("Particle Settings"):
