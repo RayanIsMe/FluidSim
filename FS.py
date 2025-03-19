@@ -3,6 +3,8 @@ import streamlit as st
 
 if 'SS' not in st.session_state:
   st.session_state['SS'] = 1
+  username = ["admin"]
+  password = ["admin"]
 
 if st.session_state['SS'] == 1:
     with st.container(border = True):
@@ -38,11 +40,19 @@ elif st.session_state['SS'] == 2:
     st.text_input("Username", "", key = "username")
     st.write("")
     st.text_input("Password", "", key = "password", type = "password")
+    
     if st.button("LOGIN"):
-      if st.session_state["username"] == "admin" and st.session_state["password"] == "admin":
-        st.session_state['SS'] = 3
-      else:
-        st.error("Invalid Username or Password")
+      for i in range(len(username)):
+        if st.session_state["username"] == username[i] and st.session_state["password"] == password[i]:
+          st.session_state['SS'] = 3
+        else:
+          st.error("Invalid Username or Password")
+
+    if st.button("CREATE ACCOUNT"):
+      username.append(st.session_state["username"])
+      password.append(st.session_state["password"])
+      st.caption("CREATED ACCOUNT")
+      
 elif st.session_state['SS'] == 3:
   st.write("DASHBOARD")
     
