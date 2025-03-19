@@ -68,7 +68,19 @@ elif st.session_state['SS'] == 3:
     st.session_state['SS'] = 4
 
 elif st.session_state['SS'] == 4:
-  st.write("simulation screen")
+  with st.container(border = True):
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+      with st.container(border = True):
+        st.write("pause play")
+    with c2:
+      with st.container(border = True):
+        with st.expander("Particle Settings"):
+          st.write("things")
+    with c3:
+      with st.container(border = True):
+        with st.expander("Simulation Environment"):
+          st.write("things")
     
     
 
