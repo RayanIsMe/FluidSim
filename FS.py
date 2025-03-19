@@ -89,6 +89,10 @@ elif st.session_state['SS'] == 4:
       with st.expander("Particle Settings"):
         st.text_input("Particle Mass", key = "particleMass")
         st.text_input("Particle Density", key = "particleDensity")
+        st.text_input("Particle X Speed", key = "particleXSpeed")
+        st.text_input("Particle Y Speed", key = "particleYSpeed")
+        st.text_input("Particle Force Coefficient", key = "particleForce")
+        st.text_input("Particle Collision Coefficient", key = "particleCollision")
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
         st.write("things")
