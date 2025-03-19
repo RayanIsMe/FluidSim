@@ -34,6 +34,7 @@ if st.session_state['SS'] == 1:
     
     if st.button("GET STARTED"):
       st.session_state['SS'] = 2
+      st.rerun()
 
 #---------------------------------------------------------------------------------------------------------
 #LOGIN SCREEN
@@ -51,6 +52,7 @@ elif st.session_state['SS'] == 2:
       for i in range(len(st.session_state["username_correct"])):
         if st.session_state["username"] == st.session_state["username_correct"][i] and st.session_state["password"] == st.session_state["password_correct"][i]:
           st.session_state['SS'] = 3
+          st.rerun()
         else:
           st.error("Invalid Username or Password")
 
@@ -75,6 +77,7 @@ elif st.session_state['SS'] == 3:
       st.image("Logo2.png")
   if st.button("Countinue to Simulation"):
     st.session_state['SS'] = 4
+    st.rerun()
 
 #---------------------------------------------------------------------------------------------------------
 #SIMULATION SCREEN
