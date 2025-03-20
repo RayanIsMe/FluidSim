@@ -116,7 +116,7 @@ elif st.session_state['SS'] == 4:
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
         st.number_input("Iterations", value = 100, key = "Iterations")
-        st.number_input("Gravity", value = 10, key = "Gravity")
+        st.number_input("Gravity", value = 0, key = "Gravity")
         st.number_input("X Boundary", value = 30, key = "Bx")
         st.number_input("Y Boundary", value = 10, key = "By")
     with c4: #Analysis Tools
@@ -219,6 +219,8 @@ elif st.session_state['SS'] == 4:
           # UPDATE POSITIONS
           st.session_state["p"][i].x += st.session_state["p"][i].Vx
           st.session_state["p"][i].y += st.session_state["p"][i].Vy
+
+          st.session_state["p"][i].y -= st.session_state["Gravity"]
   
           # Border collision
           if st.session_state["p"][i].y < 0:
