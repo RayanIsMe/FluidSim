@@ -107,24 +107,24 @@ elif st.session_state['SS'] == 4:
             st.session_state["timeP"] = 0
     with c2: #Particle Settings
       with st.expander("Particle Settings"):
-        st.text_input("Particle Mass", key = "particleMass")
-        st.text_input("Particle Density", key = "particleDensity")
-        st.text_input("Particle X Speed", key = "particleXSpeed")
-        st.text_input("Particle Y Speed", key = "particleYSpeed")
-        st.text_input("Particle Force Coefficient", key = "particleForce")
-        st.text_input("Particle Collision Coefficient", key = "particleCollision")
+        st.number_input("Particle Mass", value = 0.5, key = "particleMass")
+        st.number_input("Particle Density", value = 5, key = "particleDensity")
+        st.number_input("Particle X Speed", value = 0.7, key = "particleXSpeed")
+        st.number_input("Particle Y Speed", value = 0, key = "particleYSpeed")
+        st.number_input("Particle Force Coefficient", value = 0.005, key = "particleForce")
+        st.number_input("Particle Collision Coefficient", value = 0.05, key = "particleCollision")
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
         st.number_input("Iterations", value = 100, key = "Iterations")
-        st.text_input("Gravity", key = "Gravity")
+        st.number_input("Gravity", value = 10, key = "Gravity")
         st.number_input("X Boundary", value = 30, key = "Bx")
         st.number_input("Y Boundary", value = 10, key = "By")
     with c4: #Analysis Tools
       with st.expander("Analysis Tools"):
-        st.write("Resultant Y Force: " + "10")
-        st.write("Resultant X Force: " + "2")
-        st.write("Total Pressure: " + "4")
-        st.write("Average Temprature: " + "3")
+        st.write("Resultant Y Force: " + "--")
+        st.write("Resultant X Force: " + "--")
+        st.write("Total Pressure: " + "--")
+        st.write("Average Temprature: " + "--")
   #SIMULATION ---------------------------------------------------------------------------------------------------------------------------------------------------------------
   #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
