@@ -294,8 +294,9 @@ elif st.session_state['SS'] == 4:
           
   
           #ADD PLOTS
-          pltx.append(st.session_state["p"][i].x)
-          plty.append(st.session_state["p"][i].y)
+          if st.session_state["p"][i].x < st.session_state["Bx"]:
+            pltx.append(st.session_state["p"][i].x)
+            plty.append(st.session_state["p"][i].y)
   
           
       #DELETE REQUIRED OBJECTS
