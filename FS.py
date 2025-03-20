@@ -319,7 +319,7 @@ elif st.session_state['SS'] == 4:
       st.session_state["ploty"].append(plty)
   
       
-      placeholder.progress(st.session_state["timeP"]/st.session_state["its"], text = "Progress")
+      placeholder.progress(st.session_state["timeP"]/(st.session_state["its"]+5), text = "Progress")
   
       if st.session_state["timeP"] > st.session_state["its"]:
                   st.session_state['Sim'] = 3
