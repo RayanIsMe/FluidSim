@@ -44,7 +44,6 @@ if st.session_state['SS'] == 1:
 #LOGIN SCREEN
       
 elif st.session_state['SS'] == 2:
-  st.write(st.session_state['SS'])
   with st.container(border = True):
     st.header("Create Account")
     st.write("")
