@@ -94,13 +94,13 @@ elif st.session_state['SS'] == 4:
         b1, b2, b3 = st.columns(3)
         with b1:
           if st.button("", icon="⏸️"):
-            st.write("Pause")
+            st.session_state["PausePlay"] = 0
         with b2:
           if st.button("", icon="▶️"):
-            st.write("Play")
+            st.session_state["PausePlay"] = 1
         with b3:
           if st.button("", icon="🔄"):
-            st.write("Restart")
+            st.session_state["timeP"] = 0
     with c2: #Particle Settings
       with st.expander("Particle Settings"):
         st.text_input("Particle Mass", key = "particleMass")
@@ -317,6 +317,7 @@ elif st.session_state['SS'] == 4:
       if st.session_state["timeP"] > st.session_state["its"]+20:
                   st.session_state['Sim'] = 3
                   st.session_state["timeP"] = 0
+                  st.session_state["PausePlay"] = 0
   
       st.rerun()
                   
@@ -326,7 +327,8 @@ elif st.session_state['SS'] == 4:
                       'x': st.session_state["plotx"][st.session_state["timeP"]],
                       'y': st.session_state["ploty"][st.session_state["timeP"]],
                   })
-                  st.session_state["timeP"] += 1
+                  if st.session_state["PausePlay"] == 1:
+                    st.session_state["timeP"] += 1
                   
                   with placeholder.container():
                           st.scatter_chart(data = df, x = 'x', y = 'y', width = 700, height = 400)
@@ -337,7 +339,9 @@ elif st.session_state['SS'] == 4:
                   time.sleep(0.1)
                   st.rerun()
           else:
-                  st.write("Over")
+                  st.header("SIMULATION OVER. CLICK RESTART TO RERUN SAME SIMULATION OR CLICK RECALCULATE WITH NEW VARIABLES TO RERENDER THE SIMULATION.")
+                  if st.button("Recalculate"):
+                    st.session_state['Sim'] = 2
   
       
       
