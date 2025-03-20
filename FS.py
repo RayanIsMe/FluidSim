@@ -34,7 +34,7 @@ if st.session_state['SS'] == 1:
     with c2:
         st.subheader("ABOUT THE AUTHOR")
         with st.container(border = True):
-          st.write("I’m Rayan Gupta, a 12th-grade IBDP student passionate about physics, mathematics, and technology. I created Fluid Simulation to make fluid mechanics interactive and accessible for students like me. I love problem-solving, coding, and finding innovative ways to connect education with hands-on learning, making complex concepts easier to understand and explore.")
+          st.write("I’m Student X, a 12th-grade IBDP student passionate about physics, mathematics, and technology. I created Fluid Simulation to make fluid mechanics interactive and accessible for students like me. I love problem-solving, coding, and finding innovative ways to connect education with hands-on learning, making complex concepts easier to understand and explore.")
     
     if st.button("GET STARTED"):
       st.session_state['SS'] = 2
