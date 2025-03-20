@@ -82,8 +82,8 @@ elif st.session_state['SS'] == 3:
   if st.button("Countinue to Simulation"):
     st.session_state['SS'] = 4
     st.rerun()
-  s1, s2, s3, s4, s5 = st.columns(5)
-  with s5:
+  s1, s2, s3, s4, s5, s6 = st.columns(6)
+  with s6:
     if st.button("LOGOUT"):
       st.session_state['SS'] = 1
       st.rerun()
@@ -348,6 +348,12 @@ elif st.session_state['SS'] == 4:
                   if st.button("Recalculate"):
                     st.session_state['Sim'] = 1
                     st.rerun()
+                    
+  s1, s2, s3, s4, s5, s6 = st.columns(6)
+  with s6:
+    if st.button("LOGOUT"):
+      st.session_state['SS'] = 1
+      st.rerun()
   
       
       
