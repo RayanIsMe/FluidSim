@@ -337,8 +337,6 @@ elif st.session_state['SS'] == 4:
                   
                   with placeholder.container():
                           st.scatter_chart(data = df, x = 'x', y = 'y', width = 700, height = 400)
-                          st.write(len(st.session_state["plotx"]))
-                          st.write(st.session_state["its"])
                           # st.write(st.session_state["plotx"][st.session_state["timeP"]-1])
                           # st.write( st.session_state["ploty"][st.session_state["timeP"]-1])
                   time.sleep(0.1)
