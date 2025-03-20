@@ -113,8 +113,8 @@ elif st.session_state['SS'] == 4:
       with st.expander("Simulation Environment"):
         st.number_input("Interations", value = 100, key = "Interations")
         st.text_input("Gravity", key = "Gravity")
-        st.text_input("X Boundary", key = "Bx")
-        st.text_input("Y Boundary", key = "By")
+        st.number_input("X Boundary", value = 30, key = "Bx")
+        st.number_input("Y Boundary", value = 10, key = "By")
     with c4: #Analysis Tools
       with st.expander("Analysis Tools"):
         st.write("Resultant Y Force: " + "10")
@@ -152,10 +152,7 @@ elif st.session_state['SS'] == 4:
       #defining variables
       st.session_state["timeP"] = 0 #variable keeping track of number of interations. This variable increases by one every time the program runs through the while loop.
       st.session_state["particleCount"] = 0 #variable to keep track of number of particles
-      
-      #border
-      st.session_state["Bx"] = 30 #length of area of scatter plot x
-      st.session_state["By"] = 10 #height of area of scatter plot y
+  
       
       #control variables
       st.session_state["initialSpeed"] = 0.5 #initial speed the particle travels at
