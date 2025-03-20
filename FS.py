@@ -319,9 +319,9 @@ elif st.session_state['SS'] == 4:
       st.session_state["ploty"].append(plty)
   
       
-      placeholder.write(st.session_state["timeP"])
+      placeholder.progress(st.session_state["timeP"]/st.session_state["its"], text = "Progress")
   
-      if st.session_state["timeP"] > st.session_state["its"]+20:
+      if st.session_state["timeP"] > st.session_state["its"]:
                   st.session_state['Sim'] = 3
                   st.session_state["timeP"] = 0
                   st.session_state["PausePlay"] = 0
