@@ -82,6 +82,11 @@ elif st.session_state['SS'] == 3:
   if st.button("Countinue to Simulation"):
     st.session_state['SS'] = 4
     st.rerun()
+  s1, s2, s3 = st.columns(3)
+  with s3:
+    if st.button("LOGOUT"):
+      st.session_state['SS'] = 1
+      st.rerun()
 
 #---------------------------------------------------------------------------------------------------------
 #SIMULATION SCREEN
@@ -111,7 +116,7 @@ elif st.session_state['SS'] == 4:
         st.text_input("Particle Collision Coefficient", key = "particleCollision")
     with c3: #Simulation Environment
       with st.expander("Simulation Environment"):
-        st.number_input("Interations", value = 100, key = "Interations")
+        st.number_input("Iterations", value = 100, key = "Iterations")
         st.text_input("Gravity", key = "Gravity")
         st.number_input("X Boundary", value = 30, key = "Bx")
         st.number_input("Y Boundary", value = 10, key = "By")
@@ -174,7 +179,7 @@ elif st.session_state['SS'] == 4:
       #plotting lists
       st.session_state["plotx"] = []
       st.session_state["ploty"] = []
-      st.session_state["its"] = st.session_state["Interations"]
+      st.session_state["its"] = st.session_state["Iterations"]
       
       #OBJECT DEFINITION-----------------------------------------------------------------------------------------------
       st.session_state["objCount"] = 0 #keeps track of number of object particles. Stays constant
@@ -341,7 +346,8 @@ elif st.session_state['SS'] == 4:
           else:
                   st.header("SIMULATION OVER. CLICK RESTART TO RERUN SAME SIMULATION OR CLICK RECALCULATE WITH NEW VARIABLES TO RERENDER THE SIMULATION.")
                   if st.button("Recalculate"):
-                    st.session_state['Sim'] = 2
+                    st.session_state['Sim'] = 1
+                    st.rerun()
   
       
       
